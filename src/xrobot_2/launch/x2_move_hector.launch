@@ -1,0 +1,8 @@
+<launch>
+
+  <include file="$(find xrobot_base)/launch/xrobot_odom_laser.launch" />
+  <include file="$(find xrobot_2)/launch/slam_hector_odom.launch" />
+  <include file="$(find xrobot_2)/param/move_base.xml" />
+  <include file="$(find xrobot_base)/launch/frontier_exploration.launch" />
+
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/kinetic/xrobot_ws/install
+
+Name: raspicam_node
+Description: Description of raspicam_node
+Version: 0.2.1
+Cflags: -I/home/kinetic/xrobot_ws/install/include
+Libs: -L/home/kinetic/xrobot_ws/install/lib 
+Requires: 

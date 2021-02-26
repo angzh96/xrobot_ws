@@ -1,0 +1,11 @@
+<launch>
+
+  <include file="$(find xrobot_serial)/launch/xrobot_serial.launch" />
+
+  <!--include file="$(find xrobot_base)/launch/rplidar.launch" /-->
+  <include file="$(find xrobot_base)/launch/rf2o_laser_odometry.launch" />
+
+  <!--include file="$(find xrobot_base_program)/launch/xrobot_base_program.launch" /-->
+  <!--include file="$(find xrobot_arm)/launch/xrobot_arm.launch" /-->
+
+</launch>

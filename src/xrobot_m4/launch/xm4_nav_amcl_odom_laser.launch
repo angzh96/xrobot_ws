@@ -1,0 +1,10 @@
+<launch>
+  <include file="$(find xrobot_base)/launch/xrobot_odom_laser.launch" />
+  <include file="$(find xrobot_4)/launch/lidar.launch" />
+  
+  <arg name="map_file" default="$(find xrobot_base)/maps/mymap.yaml"/>
+  <node pkg="map_server" name="map_server"  type="map_server" args="$(arg map_file)" />
+
+  <include file="$(find xrobot_base)/launch/amcl.launch" />
+  <include file="$(find xrobot_m4)/param/move_base.xml" />
+</launch>

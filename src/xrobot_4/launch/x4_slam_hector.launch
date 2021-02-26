@@ -1,0 +1,5 @@
+<launch>
+
+  <include file="$(find xrobot_4)/launch/slam_hector.launch" />
+
+</launch>

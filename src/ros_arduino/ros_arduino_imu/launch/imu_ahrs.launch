@@ -1,0 +1,22 @@
+<launch>
+
+  <node pkg="rosserial_python" type="serial_node.py" name="ros_arduino_imu" output="screen" respawn="true">
+    <param name="~port" value="/dev/ttyACM0" />
+    <param name="~baud" value="115200" />
+  </node> 
+
+  <node pkg="ros_arduino_imu" type="raw_imu_bridge_node" name="raw_imu_bridge" output="screen" respawn="false">
+   <rosparam>
+   imu/gyroscope_bias: {x: -0.064235, y: 0.023787, z: -0.005952}
+   imu/accelerometer_bias: {x: 0.191142, y: 0.013549, z: -8.977688}
+   </rosparam>
+   <param name="imu/perform_calibration" value="false" />
+   <param name="imu/use_mag_msg" value="true" />
+  </node>
+
+  <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick" output="screen" respawn="false">
+    <param name="fixed_frame" value="odom"/>
+    <param name="use_mag" value="true"/>
+  </node>
+
+</launch>

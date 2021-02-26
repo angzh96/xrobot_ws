@@ -1,0 +1,8 @@
+<launch>
+
+  <include file="$(find xrobot_base)/launch/xrobot_odom_encoder.launch" />
+  <include file="$(find xrobot_4b)/launch/slam_gmapping.launch" />
+  <include file="$(find xrobot_4b)/param/move_base.xml" />
+  <include file="$(find xrobot_base)/launch/frontier_exploration.launch" />
+
+</launch>

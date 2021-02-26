@@ -1,0 +1,6 @@
+<launch>
+
+  <include file="$(find xrobot_base)/launch/xrobot_odom_encoder.launch" />
+  <include file="$(find xrobot_4b)/launch/slam_gmapping.launch" />
+
+</launch>

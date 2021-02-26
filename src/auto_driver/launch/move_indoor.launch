@@ -1,0 +1,13 @@
+<!--
+  Used for visualising rplidar in action.  
+  
+  It requires rplidar.launch.
+ -->
+<launch>
+  <include file="$(find xrobot_4b)/launch/lidar.launch" />
+  <include file="$(find xrobot_serial)/launch/xrobot_serial.launch" />
+  <!--<node name="lidarfilter" pkg="simple_navigation_goals" type="move_test.py" output="screen" />-->
+  <node name="GY85" pkg="auto_driver" type="GY85.py" output="screen" />
+  <node name="move" pkg="auto_driver" type="move" output="screen" />
+ 
+</launch>

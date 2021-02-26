@@ -1,0 +1,8 @@
+prefix=/home/kinetic/xrobot_ws/devel
+
+Name: xrobot_m4b
+Description: Description of xrobot_m4b
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/kinetic/xrobot_ws/devel/lib 
+Requires: 

@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find xrobot_2)/launch/lidar.launch" />
+  <include file="$(find xrobot_base)/param/slam_gmapping.xml" />
+</launch>

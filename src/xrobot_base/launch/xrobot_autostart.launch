@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find xrobot_m4b)/launch/xm4b_move_gmapping.launch" />
+  <include file="$(find turtlebot_arm_bringup)/launch/arm.launch" />
+  <include file="$(find xrobot_arm)/launch/xrobot_arm.launch" />
+  <include file="$(find xrobot_base_program)/launch/xrobot_base_program.launch" />  
+
+</launch>

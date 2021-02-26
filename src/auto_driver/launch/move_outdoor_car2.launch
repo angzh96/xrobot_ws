@@ -1,0 +1,15 @@
+<!--
+  Used for visualising rplidar in action.  
+  
+  It requires rplidar.launch.
+ -->
+<launch>
+  <include file="$(find xrobot_4b)/launch/lidar.launch" />
+  <include file="$(find xrobot_serial)/launch/xrobot_serial.launch" />
+  <node name="GY85" pkg="auto_driver" type="GY85.py" output="screen" />
+  <node name="GPS" pkg="auto_driver" type="GPS.py" output="screen" />
+  <node name="routing" pkg="auto_driver" type="routing.py" output="screen" />
+  <node name="move" pkg="auto_driver" type="move_new" output="screen" />
+  <node name="webSocket" pkg="auto_driver" type="websocket1.py" output="screen" />
+ 
+</launch>

@@ -1,0 +1,14 @@
+<launch>
+
+  <!--rplidar-->
+  <include file="$(find xrobot_base)/launch/rplidar.launch" />
+  <!--ydlidar-->
+  <!--include file="$(find xrobot_base)/launch/ydlidar_x4.launch" /-->
+
+  <!-- X4 -->
+  <!--node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="-0.023 0 0.16 3.141593 0 0  /base_link /laser  10"/-->
+
+  <!-- X4B -->
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.065 0 0.12 0 0 0  /base_link /laser  10"/>
+  
+</launch>

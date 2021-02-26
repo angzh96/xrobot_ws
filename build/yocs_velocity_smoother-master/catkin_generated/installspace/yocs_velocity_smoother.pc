@@ -1,0 +1,8 @@
+prefix=/home/kinetic/xrobot_ws/install
+
+Name: yocs_velocity_smoother
+Description: Description of yocs_velocity_smoother
+Version: 0.10.0
+Cflags: -I/home/kinetic/xrobot_ws/install/include
+Libs: -L/home/kinetic/xrobot_ws/install/lib -lyocs_velocity_smoother_node
+Requires: roscpp pluginlib nodelet dynamic_reconfigure geometry_msgs nav_msgs

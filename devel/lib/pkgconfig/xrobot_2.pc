@@ -1,0 +1,8 @@
+prefix=/home/kinetic/xrobot_ws/devel
+
+Name: xrobot_2
+Description: Description of xrobot_2
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/kinetic/xrobot_ws/devel/lib 
+Requires: 

@@ -1,0 +1,4 @@
+<launch>
+  <!--include file="$(find usb_cam)/launch/usb_cam.launch" /-->
+  <node name="libuvc_camera" pkg="libuvc_camera" type="camera_node" output="screen" />
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/kinetic/xrobot_ws/devel
+
+Name: auto_driver
+Description: Description of auto_driver
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/kinetic/xrobot_ws/devel/lib 
+Requires: 

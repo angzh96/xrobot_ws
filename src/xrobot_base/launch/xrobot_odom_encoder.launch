@@ -1,0 +1,9 @@
+<launch>
+
+  <include file="$(find xrobot_serial)/launch/xrobot_serial.launch" />
+  <include file="$(find ros_arduino_imu)/launch/xrobot_imu.launch" />
+  <node pkg="xrobot_base" type="xrobot_odom_encoder" name="x_odom_encoder" output="screen"/>
+  <!--include file="$(find xrobot_base_program)/launch/xrobot_base_program.launch" /-->
+  <!--include file="$(find xrobot_arm)/launch/xrobot_arm.launch" /-->
+
+</launch>

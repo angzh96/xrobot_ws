@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kinetic/xrobot_ws/src/raspicam_node/include/RaspiCLI.h
+
+/home/kinetic/xrobot_ws/src/raspicam_node/src/RaspiCLI.cpp
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+memory.h
+-
+interface/vcos/vcos.h
+/home/kinetic/xrobot_ws/src/raspicam_node/src/interface/vcos/vcos.h
+RaspiCLI.h
+/home/kinetic/xrobot_ws/src/raspicam_node/src/RaspiCLI.h
+

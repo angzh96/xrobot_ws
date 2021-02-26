@@ -1,0 +1,12 @@
+<launch>
+
+  <node name="serial_bridge" pkg="xrobot_serial" type="xrobot_serial_bridge_node" output="screen" respawn="false">
+  <param name="port"       value="/dev/xrobot_rosserial"/>  
+  <param name="baudrate"   value="115200"/>
+  <param name="debug_imu"   value="false"/>
+  <param name="debug_vel"   value="false"/>
+  <param name="debug_cmd"   value="true"/>
+  <param name="debug_arm"   value="false"/>
+  </node>
+
+</launch>

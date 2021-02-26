@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kinetic/xrobot_ws/src/Autopilot/src/DistanceBetweenLonAndLat.cpp
+iostream
+-
+math.h
+/home/kinetic/xrobot_ws/src/Autopilot/src/math.h
+
