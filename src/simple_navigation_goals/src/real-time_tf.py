@@ -42,10 +42,9 @@ class Robot:
         #rospy.loginfo('distance of the obstacle : %f', min(self.scan_filter))
         return min(self.scan_filter)
 
-
 def callback(data):
     robot = Robot()
-    
+
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
     PORT = 10086
@@ -54,24 +53,24 @@ def callback(data):
         x,y,z = robot.get_pos()
         #print robot.get_pos()
         rospy.loginfo('selfPosition:x=%s,y=%s,z=%s',x,y,z)
-        k = math.atan2(y,x) #返回值为弧度值
+        k = math.atan2(y,x)
         rospy.loginfo('angle=%f',k)
 
         dist = robot.get_scan()
         rospy.loginfo('obstacleDist:%f',dist)
         x = x + dist*(math.cos(k))
         y = y + dist*(math.sin(k))
-        rospy.loginfo('obstacle:x=%f,y=%f,z=%s',x,y,z)
-        
-        s.sendto(str(x)+","+str(y)+","+str(z)+",", (network, PORT))
-    
+        rospy.loginfo('obstaclePosition:x=%f,y=%f,z=%s',x,y,z)
 
+        s.sendto(str(x)+","+str(y)+","+str(z)+",", (network, PORT))
+
+        
 if __name__ == "__main__":
     rospy.init_node('get_pos_demo',anonymous=True)
     rospy.Subscriber("navigation_1H8", String, callback)
     rospy.spin()
     #r = rospy.Rate(100)#rospy.Rate(hz)，可以保持一定的速率来进行循环
     #r.sleep()
-    #while not rospy.is_shutdown():#rospy.is_shutdown()用于检测程序是否退出，是否按Ctrl-C或其他
+    #while not rospy.is_shutdown():#rospy.is_shutdown()用于检测程序是否退出，是>否按Ctrl-C或其他
     #    print robot.get_pos()
     #    r.sleep()

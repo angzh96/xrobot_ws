@@ -9,6 +9,7 @@
   <include file="$(find xrobot_serial)/launch/xrobot_serial.launch" />-->
   
   <node name="track" pkg="simple_navigation_goals" type="base_controller" output="screen" />
-  <node name="talk" pkg="simple_navigation_goals" type="real-time_tf.py" output="screen" />
+  <node name="get" pkg="simple_navigation_goals" type="ipmsg_get" output="screen" />
+  <node name="talk" pkg="simple_navigation_goals" type="real-time_tf_cxw.py" output="screen" />
  
 </launch>
