@@ -4,7 +4,7 @@ import rospy
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
 
-class Obstacle():
+class Obstacle:
     def __init__(self):
         self.LIDAR_ERR = 0.05
         self._cmd_pub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
@@ -14,7 +14,7 @@ class Obstacle():
         msg = rospy.wait_for_message("scan", LaserScan)
         self.scan_filter = []
         for i in range(360):
-            if i <= 195 and i > 165:
+            if i <= 15 or i > 335:
                 if msg.ranges[i] >= self.LIDAR_ERR:
                     self.scan_filter.append(msg.ranges[i])
 
@@ -23,7 +23,7 @@ class Obstacle():
         while not rospy.is_shutdown():
             self.get_scan()
 
-            if min(self.scan_filter) < 0.1:
+            if min(self.scan_filter) < 0.5:
                 self.twist.linear.x = 0.0
                 self.twist.angular.z = 0.0
                 self._cmd_pub.publish(self.twist)
@@ -37,7 +37,7 @@ class Obstacle():
             self._cmd_pub.publish(self.twist)
 
 def main():
-    rospy.init_node('turtlebot_scan')
+    rospy.init_node('self_scan')
     try:
         obstacle = Obstacle()
     except rospy.ROSInterruptException:

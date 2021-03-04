@@ -54,20 +54,20 @@ int main(int argc, char **argv) {
     Addr.sin_addr.s_addr = INADDR_ANY;
     Addr.sin_port = htons(10086);  
     iAddrLength = sizeof(Addr); 
-    string s0 = "192.168.0." ;
-    string s1;
-    ioctl(iFd, SIOCGIFCONF, &ifconf);
-    ifreq = (struct ifreq*)ifconf.ifc_buf;
-    for(int i = (ifconf.ifc_len/sizeof(struct ifreq)); i>0; i--){
-        if(ifreq->ifr_flags == AF_INET){//ipv4
-           if(s0.compare(0,10,s1,0,10) == 0){
-               s1 = inet_ntoa(((struct sockaddr_in*)&(ifreq->ifr_addr))->sin_addr);
-               //ss << s1;
-              // cout<<"=== ip: "<<s1<<" ====  "<<endl;
-           }
-        }
-        ifreq++;
-    }
+    // string s0 = "192.168.0." ;
+    // string s1;
+    // ioctl(iFd, SIOCGIFCONF, &ifconf);
+    // ifreq = (struct ifreq*)ifconf.ifc_buf;
+    // for(int i = (ifconf.ifc_len/sizeof(struct ifreq)); i>0; i--){
+    //     if(ifreq->ifr_flags == AF_INET){//ipv4
+    //        if(s0.compare(0,10,s1,0,10) == 0){
+    //            s1 = inet_ntoa(((struct sockaddr_in*)&(ifreq->ifr_addr))->sin_addr);
+    //            //ss << s1;
+    //           // cout<<"=== ip: "<<s1<<" ====  "<<endl;
+    //        }
+    //     }
+    //     ifreq++;
+    // }
     
     
     if (bind(iFd, (struct sockaddr *)&Addr, sizeof(Addr)) == -1)
@@ -110,13 +110,7 @@ int main(int argc, char **argv) {
                 break;
             }
         }
-        /*const char *send_buf;
-        send_buf = s1.c_str();
-        if(flag.compare("0")){
-            if(sendto(iFd, send_buf, sizeof(send_buf), 0, (struct sockaddr *)&Addr, iAddrLength) == -1){
-            printf("send failed!\n");
-          }
-        }*/
+
        /* if(flag.compare("0")){
             ipmsg.data = ss.str();
             pub.publish(ipmsg);
@@ -145,9 +139,9 @@ int main(int argc, char **argv) {
             goal.target_pose.pose.orientation.w = w;
             
             cout<< "========================================="<<endl;
-            cout<<"x = "<<x<<"x_now = "<<x_now<<endl;
-            cout<<"y = "<<y<<"y_now = "<<y_now<<endl;
-            cout<<"w = "<<w<<"w_now = "<<w_now<<endl;
+            cout<<"x = "<<x<<"  x_now = "<<x_now<<endl;
+            cout<<"y = "<<y<<"  y_now = "<<y_now<<endl;
+            cout<<"w = "<<w<<"  w_now = "<<w_now<<endl;
             cout<< "========================================="<<endl;
 
             x_now = x;

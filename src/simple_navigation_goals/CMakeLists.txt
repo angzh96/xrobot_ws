@@ -253,14 +253,6 @@ target_link_libraries(msg_send
   ${catkin_LIBRARIES}
 )
 
-add_executable(msg_send1
-  src/msg_send1.cpp
-)
-add_dependencies(msg_send1 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(msg_send1
-  ${catkin_LIBRARIES}
-)
-
 add_executable(simple_navigation_goals_cxw
   src/simple_navigation_goals_cxw.cpp
 )

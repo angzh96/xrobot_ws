@@ -39,7 +39,7 @@ int main(int argc, char **argv)
     memset(&Addr, 0, sizeof(struct sockaddr_in));  
     Addr.sin_family = AF_INET;  
     //Addr.sin_addr.s_addr = INADDR_ANY;
-    Addr.sin_port = htons(10086);  
+    Addr.sin_port = htons(10011);  
     Addr.sin_addr.s_addr = inet_addr("192.168.0.106");
     iAddrLength = sizeof(Addr); 
     string s0 = "192.168.0." ;
