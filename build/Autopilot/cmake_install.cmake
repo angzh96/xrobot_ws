@@ -1,4 +1,4 @@
-# Install script for directory: /home/kinetic/xrobot_ws/src/autopilot
+# Install script for directory: /home/kinetic/xrobot_ws/src/Autopilot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,17 +33,37 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kinetic/xrobot_ws/build/autopilot/catkin_generated/installspace/autopilot.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Autopilot/cmake" TYPE FILE FILES "/home/kinetic/xrobot_ws/build/Autopilot/catkin_generated/installspace/Autopilot-msg-paths.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autopilot/cmake" TYPE FILE FILES
-    "/home/kinetic/xrobot_ws/build/autopilot/catkin_generated/installspace/autopilotConfig.cmake"
-    "/home/kinetic/xrobot_ws/build/autopilot/catkin_generated/installspace/autopilotConfig-version.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/kinetic/xrobot_ws/devel/share/roseus/ros/Autopilot")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/kinetic/xrobot_ws/devel/lib/python2.7/dist-packages/Autopilot")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/kinetic/xrobot_ws/devel/lib/python2.7/dist-packages/Autopilot")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kinetic/xrobot_ws/build/Autopilot/catkin_generated/installspace/Autopilot.pc")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Autopilot/cmake" TYPE FILE FILES "/home/kinetic/xrobot_ws/build/Autopilot/catkin_generated/installspace/Autopilot-msg-extras.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Autopilot/cmake" TYPE FILE FILES
+    "/home/kinetic/xrobot_ws/build/Autopilot/catkin_generated/installspace/AutopilotConfig.cmake"
+    "/home/kinetic/xrobot_ws/build/Autopilot/catkin_generated/installspace/AutopilotConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/autopilot" TYPE FILE FILES "/home/kinetic/xrobot_ws/src/autopilot/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Autopilot" TYPE FILE FILES "/home/kinetic/xrobot_ws/src/Autopilot/package.xml")
 endif()
 

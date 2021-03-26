@@ -261,14 +261,6 @@ target_link_libraries(simple_navigation_goals_cxw
   ${catkin_LIBRARIES}
 )
 
-add_executable(simple_navigation_goals_test
-  src/simple_navigation_goals_test.cpp
-)
-add_dependencies(simple_navigation_goals_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(simple_navigation_goals_test
-  ${catkin_LIBRARIES}
-)
-
 add_executable(ipmsg_get
   src/ipmsg_get.cpp
 )

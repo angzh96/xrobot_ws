@@ -40,7 +40,7 @@ int main(int argc, char **argv)
     Addr.sin_family = AF_INET;  
     //Addr.sin_addr.s_addr = INADDR_ANY;
     Addr.sin_port = htons(10011);  
-    Addr.sin_addr.s_addr = inet_addr("192.168.0.106");
+    Addr.sin_addr.s_addr = inet_addr("192.168.0.102");
     iAddrLength = sizeof(Addr); 
     string s0 = "192.168.0." ;
     string s1;
@@ -77,7 +77,7 @@ int main(int argc, char **argv)
         if(sendto(iFd, send_buf, 20, 0, (struct sockaddr *)&Addr, iAddrLength) == -1){
             printf("send failed!\n");
         }
-        //cout<<"i have sent ip:"<<sizeof(send_buf)<<endl;
+        //cout<<"i have sent ip:"<<send_buf<<endl;
     }
     close(iFd);
     return 0;

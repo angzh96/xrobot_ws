@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/kinetic/xrobot_ws/src/autopilot/src/client.cpp
+/home/kinetic/xrobot_ws/src/Autopilot/src/client.cpp
 ros/ros.h
-/home/kinetic/xrobot_ws/src/autopilot/src/ros/ros.h
+/home/kinetic/xrobot_ws/src/Autopilot/src/ros/ros.h
 sensor_msgs/LaserScan.h
-/home/kinetic/xrobot_ws/src/autopilot/src/sensor_msgs/LaserScan.h
+/home/kinetic/xrobot_ws/src/Autopilot/src/sensor_msgs/LaserScan.h
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h

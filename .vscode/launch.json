@@ -15,7 +15,7 @@
 			"target": "dev${relativeFile}",
 			"cwd": "${workspaceRoot}",
 			"ssh": {
-				"host": "172.20.10.4",
+				"host": "172.20.10.5",
 				"user": "nodes",
 				"keyfile": "/home/kinetic/.ssh/id_rsa",
 				"cwd": "/home/nodes/xrobot_ws"

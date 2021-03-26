@@ -49,36 +49,36 @@ CMAKE_SOURCE_DIR = /home/kinetic/xrobot_ws/src
 CMAKE_BINARY_DIR = /home/kinetic/xrobot_ws/build
 
 # Include any dependencies generated for this target.
-include autopilot/CMakeFiles/client.dir/depend.make
+include Autopilot/CMakeFiles/client.dir/depend.make
 
 # Include the progress variables for this target.
-include autopilot/CMakeFiles/client.dir/progress.make
+include Autopilot/CMakeFiles/client.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include autopilot/CMakeFiles/client.dir/flags.make
+include Autopilot/CMakeFiles/client.dir/flags.make
 
-autopilot/CMakeFiles/client.dir/src/client.cpp.o: autopilot/CMakeFiles/client.dir/flags.make
-autopilot/CMakeFiles/client.dir/src/client.cpp.o: /home/kinetic/xrobot_ws/src/autopilot/src/client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kinetic/xrobot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object autopilot/CMakeFiles/client.dir/src/client.cpp.o"
-	cd /home/kinetic/xrobot_ws/build/autopilot && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/client.cpp.o -c /home/kinetic/xrobot_ws/src/autopilot/src/client.cpp
+Autopilot/CMakeFiles/client.dir/src/client.cpp.o: Autopilot/CMakeFiles/client.dir/flags.make
+Autopilot/CMakeFiles/client.dir/src/client.cpp.o: /home/kinetic/xrobot_ws/src/Autopilot/src/client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kinetic/xrobot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Autopilot/CMakeFiles/client.dir/src/client.cpp.o"
+	cd /home/kinetic/xrobot_ws/build/Autopilot && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/client.cpp.o -c /home/kinetic/xrobot_ws/src/Autopilot/src/client.cpp
 
-autopilot/CMakeFiles/client.dir/src/client.cpp.i: cmake_force
+Autopilot/CMakeFiles/client.dir/src/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/client.cpp.i"
-	cd /home/kinetic/xrobot_ws/build/autopilot && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinetic/xrobot_ws/src/autopilot/src/client.cpp > CMakeFiles/client.dir/src/client.cpp.i
+	cd /home/kinetic/xrobot_ws/build/Autopilot && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kinetic/xrobot_ws/src/Autopilot/src/client.cpp > CMakeFiles/client.dir/src/client.cpp.i
 
-autopilot/CMakeFiles/client.dir/src/client.cpp.s: cmake_force
+Autopilot/CMakeFiles/client.dir/src/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/client.cpp.s"
-	cd /home/kinetic/xrobot_ws/build/autopilot && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinetic/xrobot_ws/src/autopilot/src/client.cpp -o CMakeFiles/client.dir/src/client.cpp.s
+	cd /home/kinetic/xrobot_ws/build/Autopilot && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kinetic/xrobot_ws/src/Autopilot/src/client.cpp -o CMakeFiles/client.dir/src/client.cpp.s
 
-autopilot/CMakeFiles/client.dir/src/client.cpp.o.requires:
+Autopilot/CMakeFiles/client.dir/src/client.cpp.o.requires:
 
-.PHONY : autopilot/CMakeFiles/client.dir/src/client.cpp.o.requires
+.PHONY : Autopilot/CMakeFiles/client.dir/src/client.cpp.o.requires
 
-autopilot/CMakeFiles/client.dir/src/client.cpp.o.provides: autopilot/CMakeFiles/client.dir/src/client.cpp.o.requires
-	$(MAKE) -f autopilot/CMakeFiles/client.dir/build.make autopilot/CMakeFiles/client.dir/src/client.cpp.o.provides.build
-.PHONY : autopilot/CMakeFiles/client.dir/src/client.cpp.o.provides
+Autopilot/CMakeFiles/client.dir/src/client.cpp.o.provides: Autopilot/CMakeFiles/client.dir/src/client.cpp.o.requires
+	$(MAKE) -f Autopilot/CMakeFiles/client.dir/build.make Autopilot/CMakeFiles/client.dir/src/client.cpp.o.provides.build
+.PHONY : Autopilot/CMakeFiles/client.dir/src/client.cpp.o.provides
 
-autopilot/CMakeFiles/client.dir/src/client.cpp.o.provides.build: autopilot/CMakeFiles/client.dir/src/client.cpp.o
+Autopilot/CMakeFiles/client.dir/src/client.cpp.o.provides.build: Autopilot/CMakeFiles/client.dir/src/client.cpp.o
 
 
 # Object files for target client
@@ -88,45 +88,46 @@ client_OBJECTS = \
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: autopilot/CMakeFiles/client.dir/src/client.cpp.o
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: autopilot/CMakeFiles/client.dir/build.make
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /opt/ros/kinetic/lib/libroscpp.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /opt/ros/kinetic/lib/librosconsole.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /opt/ros/kinetic/lib/libxmlrpcpp.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /opt/ros/kinetic/lib/libroscpp_serialization.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /opt/ros/kinetic/lib/librostime.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /opt/ros/kinetic/lib/libcpp_common.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/kinetic/xrobot_ws/devel/lib/autopilot/client: autopilot/CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kinetic/xrobot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/kinetic/xrobot_ws/devel/lib/autopilot/client"
-	cd /home/kinetic/xrobot_ws/build/autopilot && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: Autopilot/CMakeFiles/client.dir/src/client.cpp.o
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: Autopilot/CMakeFiles/client.dir/build.make
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /opt/ros/kinetic/lib/libactionlib.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /opt/ros/kinetic/lib/libroscpp.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /opt/ros/kinetic/lib/librosconsole.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /opt/ros/kinetic/lib/librostime.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /opt/ros/kinetic/lib/libcpp_common.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/kinetic/xrobot_ws/devel/lib/Autopilot/client: Autopilot/CMakeFiles/client.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kinetic/xrobot_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/kinetic/xrobot_ws/devel/lib/Autopilot/client"
+	cd /home/kinetic/xrobot_ws/build/Autopilot && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-autopilot/CMakeFiles/client.dir/build: /home/kinetic/xrobot_ws/devel/lib/autopilot/client
+Autopilot/CMakeFiles/client.dir/build: /home/kinetic/xrobot_ws/devel/lib/Autopilot/client
 
-.PHONY : autopilot/CMakeFiles/client.dir/build
+.PHONY : Autopilot/CMakeFiles/client.dir/build
 
-autopilot/CMakeFiles/client.dir/requires: autopilot/CMakeFiles/client.dir/src/client.cpp.o.requires
+Autopilot/CMakeFiles/client.dir/requires: Autopilot/CMakeFiles/client.dir/src/client.cpp.o.requires
 
-.PHONY : autopilot/CMakeFiles/client.dir/requires
+.PHONY : Autopilot/CMakeFiles/client.dir/requires
 
-autopilot/CMakeFiles/client.dir/clean:
-	cd /home/kinetic/xrobot_ws/build/autopilot && $(CMAKE_COMMAND) -P CMakeFiles/client.dir/cmake_clean.cmake
-.PHONY : autopilot/CMakeFiles/client.dir/clean
+Autopilot/CMakeFiles/client.dir/clean:
+	cd /home/kinetic/xrobot_ws/build/Autopilot && $(CMAKE_COMMAND) -P CMakeFiles/client.dir/cmake_clean.cmake
+.PHONY : Autopilot/CMakeFiles/client.dir/clean
 
-autopilot/CMakeFiles/client.dir/depend:
-	cd /home/kinetic/xrobot_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinetic/xrobot_ws/src /home/kinetic/xrobot_ws/src/autopilot /home/kinetic/xrobot_ws/build /home/kinetic/xrobot_ws/build/autopilot /home/kinetic/xrobot_ws/build/autopilot/CMakeFiles/client.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : autopilot/CMakeFiles/client.dir/depend
+Autopilot/CMakeFiles/client.dir/depend:
+	cd /home/kinetic/xrobot_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kinetic/xrobot_ws/src /home/kinetic/xrobot_ws/src/Autopilot /home/kinetic/xrobot_ws/build /home/kinetic/xrobot_ws/build/Autopilot /home/kinetic/xrobot_ws/build/Autopilot/CMakeFiles/client.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : Autopilot/CMakeFiles/client.dir/depend
 

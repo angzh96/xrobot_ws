@@ -1,4 +1,4 @@
-# Install script for directory: /home/kinetic/xrobot_ws/src/outdoor_driving
+# Install script for directory: /home/kinetic/xrobot_ws/src/Outdoor_driving
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kinetic/xrobot_ws/build/outdoor_driving/catkin_generated/installspace/Outdoor_driving.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kinetic/xrobot_ws/build/Outdoor_driving/catkin_generated/installspace/Outdoor_driving.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Outdoor_driving/cmake" TYPE FILE FILES
-    "/home/kinetic/xrobot_ws/build/outdoor_driving/catkin_generated/installspace/Outdoor_drivingConfig.cmake"
-    "/home/kinetic/xrobot_ws/build/outdoor_driving/catkin_generated/installspace/Outdoor_drivingConfig-version.cmake"
+    "/home/kinetic/xrobot_ws/build/Outdoor_driving/catkin_generated/installspace/Outdoor_drivingConfig.cmake"
+    "/home/kinetic/xrobot_ws/build/Outdoor_driving/catkin_generated/installspace/Outdoor_drivingConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Outdoor_driving" TYPE FILE FILES "/home/kinetic/xrobot_ws/src/outdoor_driving/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Outdoor_driving" TYPE FILE FILES "/home/kinetic/xrobot_ws/src/Outdoor_driving/package.xml")
 endif()
 

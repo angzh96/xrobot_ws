@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/kinetic/xrobot_ws/src/autopilot/src/move_new.cpp
+/home/kinetic/xrobot_ws/src/Autopilot/src/move_new.cpp
 ros/ros.h
-/home/kinetic/xrobot_ws/src/autopilot/src/ros/ros.h
+/home/kinetic/xrobot_ws/src/Autopilot/src/ros/ros.h
 std_msgs/String.h
-/home/kinetic/xrobot_ws/src/autopilot/src/std_msgs/String.h
+/home/kinetic/xrobot_ws/src/Autopilot/src/std_msgs/String.h
 boost/thread.hpp
 -
 sensor_msgs/LaserScan.h
-/home/kinetic/xrobot_ws/src/autopilot/src/sensor_msgs/LaserScan.h
+/home/kinetic/xrobot_ws/src/Autopilot/src/sensor_msgs/LaserScan.h
 iostream
 -
 math.h
-/home/kinetic/xrobot_ws/src/autopilot/src/math.h
+/home/kinetic/xrobot_ws/src/Autopilot/src/math.h
 string.h
 -
 list

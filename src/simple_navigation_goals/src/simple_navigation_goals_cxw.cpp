@@ -110,7 +110,13 @@ int main(int argc, char **argv) {
                 break;
             }
         }
-
+        /*const char *send_buf;
+        send_buf = s1.c_str();
+        if(flag.compare("0")){
+            if(sendto(iFd, send_buf, sizeof(send_buf), 0, (struct sockaddr *)&Addr, iAddrLength) == -1){
+            printf("send failed!\n");
+          }
+        }*/
        /* if(flag.compare("0")){
             ipmsg.data = ss.str();
             pub.publish(ipmsg);
@@ -139,9 +145,9 @@ int main(int argc, char **argv) {
             goal.target_pose.pose.orientation.w = w;
             
             cout<< "========================================="<<endl;
-            cout<<"x = "<<x<<"  x_now = "<<x_now<<endl;
-            cout<<"y = "<<y<<"  y_now = "<<y_now<<endl;
-            cout<<"w = "<<w<<"  w_now = "<<w_now<<endl;
+            cout<<"x = "<<x<<"x_now = "<<x_now<<endl;
+            cout<<"y = "<<y<<"y_now = "<<y_now<<endl;
+            cout<<"w = "<<w<<"w_now = "<<w_now<<endl;
             cout<< "========================================="<<endl;
 
             x_now = x;

@@ -80,8 +80,8 @@ install/fast: preinstall/fast
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/opt/cmake-3.13.0/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,17 +111,6 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -132,6 +121,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+simple_navigation_goals/CMakeFiles/ipmsg_get.dir/rule:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/ipmsg_get.dir/rule
+.PHONY : simple_navigation_goals/CMakeFiles/ipmsg_get.dir/rule
+
+# Convenience name for target.
+ipmsg_get: simple_navigation_goals/CMakeFiles/ipmsg_get.dir/rule
+
+.PHONY : ipmsg_get
+
+# fast build rule for target.
+ipmsg_get/fast:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/ipmsg_get.dir/build.make simple_navigation_goals/CMakeFiles/ipmsg_get.dir/build
+.PHONY : ipmsg_get/fast
+
+# Convenience name for target.
+simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/rule:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/rule
+.PHONY : simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/rule
+
+# Convenience name for target.
+simple_navigation_goals_cxw: simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/rule
+
+.PHONY : simple_navigation_goals_cxw
+
+# fast build rule for target.
+simple_navigation_goals_cxw/fast:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/build
+.PHONY : simple_navigation_goals_cxw/fast
+
+# Convenience name for target.
 simple_navigation_goals/CMakeFiles/actionlib_generate_messages_py.dir/rule:
 	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/actionlib_generate_messages_py.dir/rule
 .PHONY : simple_navigation_goals/CMakeFiles/actionlib_generate_messages_py.dir/rule
@@ -179,6 +209,36 @@ actionlib_generate_messages_py: simple_navigation_goals/CMakeFiles/actionlib_gen
 actionlib_generate_messages_py/fast:
 	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/actionlib_generate_messages_py.dir/build.make simple_navigation_goals/CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+simple_navigation_goals/CMakeFiles/msg_send1.dir/rule:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/msg_send1.dir/rule
+.PHONY : simple_navigation_goals/CMakeFiles/msg_send1.dir/rule
+
+# Convenience name for target.
+msg_send1: simple_navigation_goals/CMakeFiles/msg_send1.dir/rule
+
+.PHONY : msg_send1
+
+# fast build rule for target.
+msg_send1/fast:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/msg_send1.dir/build.make simple_navigation_goals/CMakeFiles/msg_send1.dir/build
+.PHONY : msg_send1/fast
+
+# Convenience name for target.
+simple_navigation_goals/CMakeFiles/msg_send.dir/rule:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/msg_send.dir/rule
+.PHONY : simple_navigation_goals/CMakeFiles/msg_send.dir/rule
+
+# Convenience name for target.
+msg_send: simple_navigation_goals/CMakeFiles/msg_send.dir/rule
+
+.PHONY : msg_send
+
+# fast build rule for target.
+msg_send/fast:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/msg_send.dir/build.make simple_navigation_goals/CMakeFiles/msg_send.dir/build
+.PHONY : msg_send/fast
 
 # Convenience name for target.
 simple_navigation_goals/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
@@ -284,6 +344,21 @@ base_controller_chenshuo: simple_navigation_goals/CMakeFiles/base_controller_che
 base_controller_chenshuo/fast:
 	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/base_controller_chenshuo.dir/build.make simple_navigation_goals/CMakeFiles/base_controller_chenshuo.dir/build
 .PHONY : base_controller_chenshuo/fast
+
+# Convenience name for target.
+simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/rule:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/rule
+.PHONY : simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/rule
+
+# Convenience name for target.
+simple_navigation_goals_test: simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/rule
+
+.PHONY : simple_navigation_goals_test
+
+# fast build rule for target.
+simple_navigation_goals_test/fast:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/build
+.PHONY : simple_navigation_goals_test/fast
 
 # Convenience name for target.
 simple_navigation_goals/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
@@ -489,6 +564,87 @@ src/base_controller_chenshuo.cpp.s:
 	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/base_controller_chenshuo.dir/build.make simple_navigation_goals/CMakeFiles/base_controller_chenshuo.dir/src/base_controller_chenshuo.cpp.s
 .PHONY : src/base_controller_chenshuo.cpp.s
 
+src/ipmsg_get.o: src/ipmsg_get.cpp.o
+
+.PHONY : src/ipmsg_get.o
+
+# target to build an object file
+src/ipmsg_get.cpp.o:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/ipmsg_get.dir/build.make simple_navigation_goals/CMakeFiles/ipmsg_get.dir/src/ipmsg_get.cpp.o
+.PHONY : src/ipmsg_get.cpp.o
+
+src/ipmsg_get.i: src/ipmsg_get.cpp.i
+
+.PHONY : src/ipmsg_get.i
+
+# target to preprocess a source file
+src/ipmsg_get.cpp.i:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/ipmsg_get.dir/build.make simple_navigation_goals/CMakeFiles/ipmsg_get.dir/src/ipmsg_get.cpp.i
+.PHONY : src/ipmsg_get.cpp.i
+
+src/ipmsg_get.s: src/ipmsg_get.cpp.s
+
+.PHONY : src/ipmsg_get.s
+
+# target to generate assembly for a file
+src/ipmsg_get.cpp.s:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/ipmsg_get.dir/build.make simple_navigation_goals/CMakeFiles/ipmsg_get.dir/src/ipmsg_get.cpp.s
+.PHONY : src/ipmsg_get.cpp.s
+
+src/msg_send.o: src/msg_send.cpp.o
+
+.PHONY : src/msg_send.o
+
+# target to build an object file
+src/msg_send.cpp.o:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/msg_send.dir/build.make simple_navigation_goals/CMakeFiles/msg_send.dir/src/msg_send.cpp.o
+.PHONY : src/msg_send.cpp.o
+
+src/msg_send.i: src/msg_send.cpp.i
+
+.PHONY : src/msg_send.i
+
+# target to preprocess a source file
+src/msg_send.cpp.i:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/msg_send.dir/build.make simple_navigation_goals/CMakeFiles/msg_send.dir/src/msg_send.cpp.i
+.PHONY : src/msg_send.cpp.i
+
+src/msg_send.s: src/msg_send.cpp.s
+
+.PHONY : src/msg_send.s
+
+# target to generate assembly for a file
+src/msg_send.cpp.s:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/msg_send.dir/build.make simple_navigation_goals/CMakeFiles/msg_send.dir/src/msg_send.cpp.s
+.PHONY : src/msg_send.cpp.s
+
+src/msg_send1.o: src/msg_send1.cpp.o
+
+.PHONY : src/msg_send1.o
+
+# target to build an object file
+src/msg_send1.cpp.o:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/msg_send1.dir/build.make simple_navigation_goals/CMakeFiles/msg_send1.dir/src/msg_send1.cpp.o
+.PHONY : src/msg_send1.cpp.o
+
+src/msg_send1.i: src/msg_send1.cpp.i
+
+.PHONY : src/msg_send1.i
+
+# target to preprocess a source file
+src/msg_send1.cpp.i:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/msg_send1.dir/build.make simple_navigation_goals/CMakeFiles/msg_send1.dir/src/msg_send1.cpp.i
+.PHONY : src/msg_send1.cpp.i
+
+src/msg_send1.s: src/msg_send1.cpp.s
+
+.PHONY : src/msg_send1.s
+
+# target to generate assembly for a file
+src/msg_send1.cpp.s:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/msg_send1.dir/build.make simple_navigation_goals/CMakeFiles/msg_send1.dir/src/msg_send1.cpp.s
+.PHONY : src/msg_send1.cpp.s
+
 src/simple_navigation_goals.o: src/simple_navigation_goals.cpp.o
 
 .PHONY : src/simple_navigation_goals.o
@@ -516,6 +672,60 @@ src/simple_navigation_goals.cpp.s:
 	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals.dir/src/simple_navigation_goals.cpp.s
 .PHONY : src/simple_navigation_goals.cpp.s
 
+src/simple_navigation_goals_cxw.o: src/simple_navigation_goals_cxw.cpp.o
+
+.PHONY : src/simple_navigation_goals_cxw.o
+
+# target to build an object file
+src/simple_navigation_goals_cxw.cpp.o:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/src/simple_navigation_goals_cxw.cpp.o
+.PHONY : src/simple_navigation_goals_cxw.cpp.o
+
+src/simple_navigation_goals_cxw.i: src/simple_navigation_goals_cxw.cpp.i
+
+.PHONY : src/simple_navigation_goals_cxw.i
+
+# target to preprocess a source file
+src/simple_navigation_goals_cxw.cpp.i:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/src/simple_navigation_goals_cxw.cpp.i
+.PHONY : src/simple_navigation_goals_cxw.cpp.i
+
+src/simple_navigation_goals_cxw.s: src/simple_navigation_goals_cxw.cpp.s
+
+.PHONY : src/simple_navigation_goals_cxw.s
+
+# target to generate assembly for a file
+src/simple_navigation_goals_cxw.cpp.s:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals_cxw.dir/src/simple_navigation_goals_cxw.cpp.s
+.PHONY : src/simple_navigation_goals_cxw.cpp.s
+
+src/simple_navigation_goals_test.o: src/simple_navigation_goals_test.cpp.o
+
+.PHONY : src/simple_navigation_goals_test.o
+
+# target to build an object file
+src/simple_navigation_goals_test.cpp.o:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/src/simple_navigation_goals_test.cpp.o
+.PHONY : src/simple_navigation_goals_test.cpp.o
+
+src/simple_navigation_goals_test.i: src/simple_navigation_goals_test.cpp.i
+
+.PHONY : src/simple_navigation_goals_test.i
+
+# target to preprocess a source file
+src/simple_navigation_goals_test.cpp.i:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/src/simple_navigation_goals_test.cpp.i
+.PHONY : src/simple_navigation_goals_test.cpp.i
+
+src/simple_navigation_goals_test.s: src/simple_navigation_goals_test.cpp.s
+
+.PHONY : src/simple_navigation_goals_test.s
+
+# target to generate assembly for a file
+src/simple_navigation_goals_test.cpp.s:
+	cd /home/kinetic/xrobot_ws/build && $(MAKE) -f simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/build.make simple_navigation_goals/CMakeFiles/simple_navigation_goals_test.dir/src/simple_navigation_goals_test.cpp.s
+.PHONY : src/simple_navigation_goals_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -524,8 +734,15 @@ help:
 	@echo "... depend"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... actionlib_generate_messages_py"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... install/strip"
+	@echo "... ipmsg_get"
+	@echo "... install/local"
+	@echo "... simple_navigation_goals_cxw"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... msg_send1"
+	@echo "... msg_send"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_cpp"
@@ -533,29 +750,42 @@ help:
 	@echo "... actionlib_generate_messages_eus"
 	@echo "... move_base_msgs_generate_messages_lisp"
 	@echo "... base_controller_chenshuo"
+	@echo "... simple_navigation_goals_test"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... move_base_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... move_base_msgs_generate_messages_eus"
-	@echo "... test"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... move_base_msgs_generate_messages_nodejs"
-	@echo "... install/strip"
 	@echo "... rebuild_cache"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... base_controller"
 	@echo "... simple_navigation_goals"
-	@echo "... install/local"
 	@echo "... src/base_controller.o"
 	@echo "... src/base_controller.i"
 	@echo "... src/base_controller.s"
 	@echo "... src/base_controller_chenshuo.o"
 	@echo "... src/base_controller_chenshuo.i"
 	@echo "... src/base_controller_chenshuo.s"
+	@echo "... src/ipmsg_get.o"
+	@echo "... src/ipmsg_get.i"
+	@echo "... src/ipmsg_get.s"
+	@echo "... src/msg_send.o"
+	@echo "... src/msg_send.i"
+	@echo "... src/msg_send.s"
+	@echo "... src/msg_send1.o"
+	@echo "... src/msg_send1.i"
+	@echo "... src/msg_send1.s"
 	@echo "... src/simple_navigation_goals.o"
 	@echo "... src/simple_navigation_goals.i"
 	@echo "... src/simple_navigation_goals.s"
+	@echo "... src/simple_navigation_goals_cxw.o"
+	@echo "... src/simple_navigation_goals_cxw.i"
+	@echo "... src/simple_navigation_goals_cxw.s"
+	@echo "... src/simple_navigation_goals_test.o"
+	@echo "... src/simple_navigation_goals_test.i"
+	@echo "... src/simple_navigation_goals_test.s"
 .PHONY : help
 
 

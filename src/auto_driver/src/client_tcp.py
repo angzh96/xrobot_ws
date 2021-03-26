@@ -32,9 +32,9 @@ if __name__ == "__main__":
     t.start()
 
     fd = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    fd.connect(("175.24.59.243", 7002))
+    fd.connect(("172.20.10.6", 7001))
     #fd.connect(("127.0.0.1", 7002))
-    fd.send(bytes("1"+"\n").encode("utf-8"))
+    fd.send(bytes("car1"+"\n").encode("utf-8"))
     
     while True:
         destination = fd.recv(1024)

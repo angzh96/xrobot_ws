@@ -96,6 +96,14 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-5
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-5
+
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
 
@@ -114,6 +122,14 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-5
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-5
 
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -181,6 +197,12 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 
 //Path to a program.
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
+
+//Value Computed by CMake
+CMAKE_PROJECT_DESCRIPTION:STATIC=
+
+//Value Computed by CMake
+CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=Project
@@ -361,10 +383,10 @@ cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 cv_bridge_DIR:PATH=/opt/ros/kinetic/share/cv_bridge/cmake
 
 //Value Computed by CMake
-dist_test_BINARY_DIR:STATIC=/home/kinetic/xrobot_ws/build/dist_test
+dist_test_BINARY_DIR:STATIC=/home/kinetic/xrobot_ws/build/track_send
 
 //Value Computed by CMake
-dist_test_SOURCE_DIR:STATIC=/home/kinetic/xrobot_ws/src/dist_test
+dist_test_SOURCE_DIR:STATIC=/home/kinetic/xrobot_ws/src/track_send
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/kinetic/share/dynamic_reconfigure/cmake
@@ -454,8 +476,23 @@ move_base_msgs_DIR:PATH=/opt/ros/kinetic/share/move_base_msgs/cmake
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 
+//Value Computed by CMake
+nlink_parser_BINARY_DIR:STATIC=/home/kinetic/xrobot_ws/build/nlink_parser
+
+//Value Computed by CMake
+nlink_parser_SOURCE_DIR:STATIC=/home/kinetic/xrobot_ws/src/nlink_parser
+
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/kinetic/share/nodelet/cmake
+
+//Dependencies for the target
+nutils_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;serial;
+
+//Path to a library.
+pkgcfg_lib_avcodec_avcodec-ffmpeg:FILEPATH=/usr/lib/x86_64-linux-gnu/libavcodec-ffmpeg.so
+
+//Path to a library.
+pkgcfg_lib_swscale_swscale-ffmpeg:FILEPATH=/usr/lib/x86_64-linux-gnu/libswscale-ffmpeg.so
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
@@ -531,6 +568,9 @@ rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
 
 //The directory containing a CMake configuration file for rosserial_python.
 rosserial_python_DIR:PATH=/opt/ros/kinetic/share/rosserial_python/cmake
+
+//The directory containing a CMake configuration file for rostest.
+rostest_DIR:PATH=/opt/ros/kinetic/share/rostest/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
@@ -702,6 +742,10 @@ CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
 CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_AR
+CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_RANLIB
+CMAKE_CXX_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
 CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
@@ -714,6 +758,10 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_AR
+CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
+CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -724,6 +772,8 @@ CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//Path to cache edit program executable.
+CMAKE_EDIT_COMMAND:INTERNAL=/opt/cmake-3.13.0/bin/ccmake
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
@@ -742,6 +792,8 @@ CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
+//Generator instance identifier.
+CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
@@ -781,6 +833,8 @@ CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
 CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
+//Platform information initialized
+CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //Path to CMake installation.
@@ -856,6 +910,8 @@ _Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+__pkg_config_arguments_avcodec:INTERNAL=libavcodec;REQUIRED
+__pkg_config_arguments_swscale:INTERNAL=libswscale;REQUIRED
 __pkg_config_checked_avcodec:INTERNAL=1
 __pkg_config_checked_swscale:INTERNAL=1
 avcodec_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu

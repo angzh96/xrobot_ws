@@ -66,7 +66,7 @@ def callback(data):
         #print robot.get_pos()
         rospy.loginfo('selfPosition:x=%s,y=%s,z=%s',x,y,z)
         k = math.atan2(y,x)
-        #rospy.loginfo('angle=%f',k)
+        rospy.loginfo('angle=%f',k)
         dist = robot.get_scan()
         rospy.loginfo('obstacleDist:%f',dist)
         x = x + dist*(math.cos(k))
