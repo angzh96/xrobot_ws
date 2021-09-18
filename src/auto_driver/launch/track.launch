@@ -1,5 +1,0 @@
-<launch>
-  <include file="$(find nlink_parser)/launch/linktrack.launch" />
-  <node name="uwbmsg" pkg="auto_driver" type="uwbmsg.py" output="screen" />
-  <node name="client_tcp" pkg="auto_driver" type="client_tcp.py" output="screen" />
-</launch>

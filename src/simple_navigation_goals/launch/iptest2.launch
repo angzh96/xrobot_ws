@@ -1,3 +1,0 @@
-<launch>
-<node name="msg_get" pkg="simple_navigation_goals" type="msg_get.py" output="screen" />
-</launch> 
