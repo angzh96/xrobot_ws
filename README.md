@@ -14,6 +14,6 @@
 
 simple_navigation_goals
 
-小车协同追踪功能包。
+小车协同追踪功能包。具体见我之前发的pdf文件说明
 
 主车运行tracking.launch，从车运行coordination.launch
