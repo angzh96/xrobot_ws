@@ -1,6 +1,5 @@
 <launch>
   <include file="$(find xrobot_m4b)/launch/xm4b_nav_amcl_odom_encoder.launch" />
-  <node name="msg_send" pkg="simple_navigation_goals" type="msg_send" output="screen" />
-  <node name="coordination" pkg="simple_navigation_goals" type="simple_navigation_goals_cxw" output="screen" />
+  <node name="coordination" pkg="simple_navigation_goals" type="simple_navigation_goals" output="screen" />
  
 </launch>

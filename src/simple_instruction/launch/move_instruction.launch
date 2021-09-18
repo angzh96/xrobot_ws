@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find xrobot_m4b)/launch/xm4b_nav_amcl_odom_encoder.launch" />
+  <node name="move_instruction" pkg="simple_instruction" type="recv_instruct" output="screen" />
+ 
+</launch>

@@ -1,8 +1,0 @@
-prefix=/home/kinetic/xrobot_ws/devel
-
-Name: Autopilot
-Description: Description of Autopilot
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/kinetic/xrobot_ws/devel/lib 
-Requires: message_runtime

@@ -1,8 +1,0 @@
-prefix=/home/kinetic/xrobot_ws/devel
-
-Name: Outdoor_driving
-Description: Description of Outdoor_driving
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/kinetic/xrobot_ws/devel/lib 
-Requires: 

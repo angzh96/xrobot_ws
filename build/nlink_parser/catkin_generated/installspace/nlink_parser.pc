@@ -1,8 +1,0 @@
-prefix=/home/kinetic/xrobot_ws/install
-
-Name: nlink_parser
-Description: Description of nlink_parser
-Version: 2.1.0
-Cflags: -I/home/kinetic/xrobot_ws/install/include
-Libs: -L/home/kinetic/xrobot_ws/install/lib 
-Requires: message_runtime

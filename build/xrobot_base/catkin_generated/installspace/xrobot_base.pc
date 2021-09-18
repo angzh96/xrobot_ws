@@ -1,8 +1,0 @@
-prefix=/home/kinetic/xrobot_ws/install
-
-Name: xrobot_base
-Description: Description of xrobot_base
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/kinetic/xrobot_ws/install/lib 
-Requires: 

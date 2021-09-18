@@ -1,8 +1,0 @@
-prefix=/home/kinetic/xrobot_ws/install
-
-Name: dist_test
-Description: Description of dist_test
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/kinetic/xrobot_ws/install/lib 
-Requires: 

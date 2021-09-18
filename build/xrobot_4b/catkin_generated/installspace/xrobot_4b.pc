@@ -1,8 +1,0 @@
-prefix=/home/kinetic/xrobot_ws/install
-
-Name: xrobot_4b
-Description: Description of xrobot_4b
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/kinetic/xrobot_ws/install/lib 
-Requires: 

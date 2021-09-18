@@ -9,8 +9,8 @@ import random
 import rospy
 from std_msgs.msg import String
 
-ip = '172.20.10.6'
-port = 8001
+ip = '175.24.59.243'
+port = 10002
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 

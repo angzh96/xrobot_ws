@@ -119,7 +119,6 @@ int main(int argc, char **argv)
         }
 
         if(rect_info.rect_w<=200&&rect_info.rect_w>0){
-            
             msg.linear.x = 0.3;  
         }else if(rect_info.rect_w>=300){
             msg.linear.x = -0.3;

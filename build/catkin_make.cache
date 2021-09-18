@@ -1,2 +1,0 @@
-auto_driver:libuvc_ros/libuvc_camera:libuvc_ros/libuvc_ros:nlink_parser:raspicam_node:rf2o_laser_odometry:ros_arduino/ros_arduino:ros_arduino/ros_arduino_imu:ros_arduino/ros_arduino_msgs:rplidar_ros:simple_navigation_goals:usb_cam:xrobot_2:xrobot_4:xrobot_4b:xrobot_base:xrobot_imu_bridge:xrobot_m4:xrobot_m4b:xrobot_serial:ydlidar:yocs_velocity_smoother-master
--DCATKIN_DEVEL_PREFIX=/home/kinetic/xrobot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kinetic/xrobot_ws/install -G Unix Makefiles
