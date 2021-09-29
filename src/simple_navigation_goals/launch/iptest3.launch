@@ -1,0 +1,3 @@
+<launch>
+<node name="msg_sendd" pkg="simple_navigation_goals" type="ipmsg_get" output="screen" />
+</launch> 

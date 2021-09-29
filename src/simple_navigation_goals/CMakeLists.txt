@@ -128,6 +128,15 @@ include_directories(
   include ${catkin_INCLUDE_DIRS}
   include ${catkin_INCLUDE_DIRS}
   include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS}
 # include
   ${catkin_INCLUDE_DIRS}
 )
@@ -233,5 +242,45 @@ add_executable(simple_navigation_goals
 )
 add_dependencies(simple_navigation_goals ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(simple_navigation_goals
+  ${catkin_LIBRARIES}
+)
+
+add_executable(msg_send
+  src/msg_send.cpp
+)
+add_dependencies(msg_send ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(msg_send
+  ${catkin_LIBRARIES}
+)
+
+add_executable(msg_send1
+  src/msg_send1.cpp
+)
+add_dependencies(msg_send1 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(msg_send1
+  ${catkin_LIBRARIES}
+)
+
+add_executable(simple_navigation_goals_cxw
+  src/simple_navigation_goals_cxw.cpp
+)
+add_dependencies(simple_navigation_goals_cxw ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(simple_navigation_goals_cxw
+  ${catkin_LIBRARIES}
+)
+
+add_executable(simple_navigation_goals_test
+  src/simple_navigation_goals_test.cpp
+)
+add_dependencies(simple_navigation_goals_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(simple_navigation_goals_test
+  ${catkin_LIBRARIES}
+)
+
+add_executable(ipmsg_get
+  src/ipmsg_get.cpp
+)
+add_dependencies(ipmsg_get ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(ipmsg_get
   ${catkin_LIBRARIES}
 )
